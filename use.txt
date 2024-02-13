@@ -243,4 +243,8 @@
 
 63 : @HostBinding in Angular [in app-hover.directives.ts, sample.directives.ts(Angular-property-Binding folder)] : The @HostBinding decorator binds a host element property of a directive or a component class.
 
-64 : Property Binding In Directive :  
+64 : Property Binding In Directive(set-background.directives.ts) : how we can bind directive property from the component.
+
+65 : Creating Conditional Attribute Directive(in disable-product.directives and Host in product.component.html) : 
+
+66 : Creating a Custom Class Directive : 

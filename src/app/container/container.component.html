@@ -1,51 +1,52 @@
 <div class="ekart--product--container">
- 
-    <!-- here we use property binding -->
-<!-- <img [src]="product.pImage" alt=""> -->
 
-<!-- here we use string interpolation -->
-<!-- <p>Name : {{product.name}}</p>
+  <!-- here we use property binding -->
+  <!-- <img [src]="product.pImage" alt=""> -->
+
+  <!-- here we use string interpolation -->
+  <!-- <p>Name : {{product.name}}</p>
 <p>Price : {{"$"+product.price}}</p>
 <p>Color : {{product.color}}</p>
 <p>Discounted price : {{getDiscountedPrice().toFixed(2)}}</p> -->
-<!-- <p>inStock:{{product.inStock}}</p> -->
-<!-- <p>{{getinStock()}}</p> -->
+  <!-- <p>inStock:{{product.inStock}}</p> -->
+  <!-- <p>{{getinStock()}}</p> -->
 
-<!-- passing data through an html property -->
-<!-- <button [disabled]="!(product.inStock>0)">Buy Now</button> -->
+  <!-- passing data through an html property -->
+  <!-- <button [disabled]="!(product.inStock>0)">Buy Now</button> -->
 
-<!-- here event binding with calling method -->
-<!-- <button (click)="decrementValue()">-</button>
+  <!-- here event binding with calling method -->
+  <!-- <button (click)="decrementValue()">-</button>
 <span>{{addToCart}}</span>
 <button (click)="incrementValue()">+</button> -->
-<!-- Event binding -->
-<!-- <input  (input)="onChangeName($event)">
+  <!-- Event binding -->
+  <!-- <input  (input)="onChangeName($event)">
 <p>Name={{Name}}</p> -->
-<app-search (SearchTextChanged)="setSearchText($event)"></app-search>
-<!-- Structural directive -->
-<!-- <div *ngFor="let item of [2,3,4,5,6,7]">
+  <app-search (SearchTextChanged)="setSearchText($event)"></app-search>
+  <!-- Structural directive -->
+  <!-- <div *ngFor="let item of [2,3,4,5,6,7]">
     <p>Cuurent element of array is:{{item}} </p>
 </div> -->
-<!-- here we use component(#ProductlistComponent) as reference variable  -->
-<app-productlist [searchText]="searchText" #ProductlistComponent></app-productlist>
-<product-detail *ngIf="ProductlistComponent.selectedProduct" [productlistComp]="productListComponent"></product-detail>
+  <!-- here we use component(#ProductlistComponent) as reference variable  -->
+  <app-productlist [searchText]="searchText" #ProductlistComponent></app-productlist>
+  <product-detail *ngIf="ProductlistComponent.selectedProduct"
+    [productlistComp]="productListComponent"></product-detail>
 
   <div class="ekart-featured-products">
-     <div class="ekart-featured-products-heading">
-        <h1>Latest arrival in popular brands</h1>
-     </div>
-   <featured-brands>
-    <h3 class="title">New Arrival in Nike</h3>
-    <button class="call-to-action">Show new Arrivals in Nike</button>
-   </featured-brands>
-   <featured-brands>
-    <h3 class="title">New Arrival in Adidas</h3>
-    <button class="call-to-action">Show new Arrivals in Adidas</button>
-   </featured-brands>
-   <featured-brands>
-    <h3 class="title">New Arrival in Reebok</h3>
-    <button class="call-to-action">Show new Arrivals in Reebok</button>
-   </featured-brands>
-</div>
+    <div class="ekart-featured-products-heading">
+      <h1>Latest arrival in popular brands</h1>
+    </div>
+    <featured-brands>
+      <h3 class="title">New Arrival in Nike</h3>
+      <button class="call-to-action">Show new Arrivals in Nike</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrival in Adidas</h3>
+      <button class="call-to-action">Show new Arrivals in Adidas</button>
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrival in Reebok</h3>
+      <button class="call-to-action">Show new Arrivals in Reebok</button>
+    </featured-brands>
+  </div>
 
 </div>

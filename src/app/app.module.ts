@@ -1,4 +1,4 @@
-import { NO_ERRORS_SCHEMA,NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,8 @@ import { HighlightDirective } from './CustomDirectives/highlight.directive';
 import { AppHoveDirective } from './CustomDirectives/app-hove.directive';
 import { CommonModule } from '@angular/common';
 import { NgModel } from '@angular/forms';
-import { CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DisableProductDirective } from './CustomDirectives/disable-product.directive';
 
 
 
@@ -40,21 +41,22 @@ import { CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
     SetBackgroundDirective,
     HighlightDirective,
     AppHoveDirective,
-    
-    
+    DisableProductDirective,
+
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule
-  
-    
+
+
   ],
   providers: [
     provideClientHydration()
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule { }

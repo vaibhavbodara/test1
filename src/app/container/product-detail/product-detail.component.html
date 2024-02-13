@@ -1,4 +1,4 @@
-<div class="ekart--product--details--info scroll"  >
+<div class="ekart--product--details--info scroll" [disableProduct]="true">
     <div class="ekart-product-detail-close">
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
@@ -11,9 +11,9 @@
             <h2>{{product.name}}</h2>
         </div>
         <div class="ekart-product-detail-gbc" >
-            <span  [SetBackground]="'red'"    [textColor]="'white'">{{product.gender}}</span> 
-            <span  [SetBackground]="'yellow'" [textColor]="'black'">{{product.brand}}</span>
-            <span  [SetBackground]="'black'"  [textColor]="'white'">{{product.category}}</span>
+            <span  [SetBackground]="{backColor:'red', textColor:'white'}">{{product.gender}}</span> 
+            <span  [SetBackground]="{backColor:'yellow',textColor:'black'}">{{product.brand}}</span>
+            <span  [SetBackground]="{backColor:'black',textColor:'white'}">{{product.category}}</span>
             
         </div>
         <div class="ekart-product-detail-price">
@@ -59,7 +59,7 @@
     <div class="ekart-product-detail-addtoCart">
         <button class="btn-add-to-cart" *ngIf="product.is_in_inventory; else notifyMe" appHove>ADD TO CART</button>
         <ng-template #notifyMe>
-            <button class="btn-add-to-cart">NOTIFY ME</button>
+            <button class="btn-add-to-cart" appHove>NOTIFY ME</button>
         </ng-template>
  
     </div>
