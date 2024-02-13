@@ -1,0 +1,246 @@
+1 : Angular create single page application : Angular is js framework and create client side application.
+
+2 : Single page application(only one html file) :only content of that html file change not the web page and html file.
+    ex: gmail and netflix.
+
+3 : Why we use Angular? : Angular gives our application a clean and loosely coupled structure that is easy to understand & maintain,
+                          application built with Angular are more testable,
+                          we use angular for generate dynamic content.
+
+4 : step to create angular project setup :
+    1: node js installation
+    2: angular CLI command - is a command line interface which we use to create new angular project or 
+                             generate some boiler plate code as well as create deployable packeges.
+                             ::command-npm install -global @angular/cli@latest for install packeges
+                             ::ng(ng stands for angular) commands:-  1-ng --version --help, 2-ng version
+    3: command for create new project:- ng new project-name
+
+5 : command for Compile and run Angular project : - ng serve
+
+6 : 
+
+7 : here 1-app.components.css,2-app.component.html,3-app.component.spec.ts and 4-app.component.ts this four file create one app component
+    and file no 4 which is app.component.ts which is main component file
+    
+8 : in app component : 1-app.component.ts is main file of app component
+                       2-app.component.html is viewTamplate of main file app.component.ts and 
+                         also when we running our angular project then app.component.html content rendaring in our web page
+                       3-app.component.spec.ts this file contain some typescript code for testing a component
+
+
+9 : Files and Folder Structure : 1:node_modules - this folder contain all third party libraries , this folder not required in production only required in development
+                                 2:src - all our angular application code go in the src folder 
+                                 3:assets - in this folder we store our static assets of our application, ex: images,icons,text files etc.
+                                 4:index.html - this main html file of our angular application
+                                 5:main.ts - this file is starting point of angular application
+
+10 : Bootstrapping : is the process of initializing or loading the angular application
+
+11 : Angular project-> index.html-> angular.json-> main.ts-> App component-> View Tamplate(app.component.html)
+
+12 : Component : 1-A component is a piece of user interface.
+                 2-Every angular application has at least one component
+                 3-An angular application is esentially a tree of component
+                 4-Combining all these components together makes an angular ui
+                 5-Also component is nothing but a typescript class
+
+13 : Create a Component : 1-Create a typescript class and export it
+                          2-Decorate the class with @Component decorator
+                          3-declare the class in main module file
+
+                          ::command : ng generate component component-name                    
+
+14 : export : we use export before the class because this component we import other file also
+
+15 : View Template : The view Template of a component is a form of html that tells angular how to render a component 
+
+16 : Adding Style independantly in component file and globaly :
+
+17 : How to use Bootstrap for styling : Adding command for Bootstrap- npm i --save bootstrap
+
+18 :  two ways to add bootstrap file : 1-direct add the path in style.css - .. use for the file from the outside the folder
+                                       2-we add file path in angular.json
+
+19 : Create Component using Angular CLI : command- ng generate component component-name 
+                                                   ng g c component-name 
+
+20 : Types Of Component Selector : There are mainly three ways of component Selector :
+                                  1 : HTML TAG - Selector: "app-nav",  inHtml-<app-nav></app-nav>
+                                  2 : HTML ATTRIBUTE - Selector: By Element : ["app-nav"],
+                                                                 By ID : "#app-nav", inHtml-<div id="app-nav"></div>
+                                  3 : CSS CLASS - Selector: ".app-nav", inHtml-<div class="app-nav"></div>
+
+21 : What is DataBinding? :1-Data Binding allows us to communicate between a component class and its corresponding view template & vice-versa.
+                           2-Component(UI Logic)<---Comunication Between Component& View Template--->ViewTemplate(HTML)
+
+22 : Two Types of DataBinding :1-OneWay DataBinding : this done when, data can access from component into its corresponding view or vice versa.
+                                                      1-String Interpolation :-{{data}}   
+                               2-TwoWay DataBinding : TwoWay DataBinding binds data from component to ViewTemplate and view template to component class, 
+                                                      It is combination of property Binding & event Binding.
+                                                      1-Property binding : [property]=data
+                                                      2-event binding : (data)="expression"
+
+23 : String Interpolation : {{data}} here data means which property name we give value in component ts file,
+                            Interpolation is used to just display a piece of data in html, such as displaying a title or a name.
+                            <!-- Disabled,hidden,Checked this attribute not working in string interpolation-->  
+
+24 : Binding : :: In an Angular template, a binding creates a live connection between a part of the UI created from a template (a DOM element, directive, or component) and 
+                  the model (the component instance to which the template(ViewTemplate ) belongs).    
+
+              :: In short binding is bind the data between ViewTemplate and component class                        
+
+25 : Property Binding : 1-in Html [property(html attribute)]="data(here we write any typescript expression)", 2- bind-attributeName="typescript expression"
+                        3-when we assign some dynamic value in html that time we use property binding.
+                          Data binding from component class to ViewTemplate
+                        4-ATTRIBUTE:Represents the initial value and does not change 
+                        5-Property: Represents the current value and can change
+
+26 : ATTRIBUTE Binding : ex:Accible attribute- aria-label,aria-hidden,aria-expand,aria-control,
+                          ::  Syntax of attribute binding-[attr.attributeName]="typescript expression"
+                          ::  Data attribute-Data-id,data-name,data-value,colspan                        
+
+27 : Event Binding : Data flow from ViewTemplate to component class with help of Event Binding
+                     Event Binding:(data)="expression"                               
+  
+28 : Two Way Data Binding(use in search component) : Two Way DataBinding is combination of property binding and event binding,
+                            Two Way DataBinding binds data from component class to ViewTemplate and view template to component class.
+
+29 : directive : A directive is an instruction to the DOM ::1-Manipulate DOM , 2-Change Behaviour, 3-Add/Remove DOM Element
+                 Directive have three types : 1-Component Directive, 2-Attribute Directive,3-Structural Directive
+                 1-Component Directive : Component directive is the angular component. it is directive with a template.
+                 2-Attribute Directive : Attribute Directive is used to change the appearance or Behaviour of DOM element.
+                                         1-ngClass , 2-ngStyle(use in SqureBracket[ngStyle])
+                 3-Structural Directive : Structural directive is used to add or remove a DOM element on the webpage.
+                                          1-ngIf , 2-ngFor , 3-ngSwitch
+                                          :: for Structural directive we use *ngIf , *ngFor , *ngSwitch. 
+
+30 : ngFor Directive(productlist component)  :: Angular ngFor directive iterates over a collecti on of data like an array,list,etc.and create an html element for each of the items from the html template.
+                                             :: Using ngFor Directive Rendering list of Complex Type(in productlist Component)  
+
+31 : ngIf Directive(use in search.component.html and productlist component) :: Angular *ngIf directive is a Structural directive that is used to completely add or remove a DOM Element from the WebPage based on a given function. 
+                                                                            :: ngIf is based on condition , if condition is true than element adding from the DOM in webpage and if condition is false than element removing from the DOM in webpage.                       
+
+32 : ngStyle Directive(use in productlist component) : The ngStyle directive is an attribute directive which allows us to set many inline style of an Html element using expression,
+                                                       With Help of ngStyle we can add style as a dynamically
+
+33 : ngClass Directive(search component) : The ngClass directive is an attribute directive, which allows us to add or remove CSS classes to or from an HTML element dynamically, based on some typescript expression.
+
+34 : @Input() decorator & Custom Property Binding : When data transfer Parent component to Child component that time we use Custom property binding using @Input() decorator,
+                                                    Basically Comunication Between two components
+
+35 : Custom Property Binding : Custom Property Binding is when we bind properties of a component class to some typescript expression.
+
+36 : @Output() decorator & Custom Event Binding : When data transfer Child component to Parent component that time we use Custom Event binding using @Outputput() decorator,
+
+37 : Non-Relatable Component Comunication(sibling components)(we use between search component and productlist component) : here we first transfer data search component(child) to container component(Parent) then transfer container(Parent) to productlist(chiid)
+
+38 : Template Reference Variable(in search component) : A Template Reference Variable is a Variable which stores Reference to a DOM element, component or directive on which it is used.     
+
+39 : Reference Variable Component(container component) :   
+
+40 : @ViewChild decorator in Angular(in search component) : The ViewChild decorator is used to query and get a Reference of the DOM element in the component.
+                                                            It returns the first matching element. 
+                                                            ViewChild only give one dom element which is first matching element
+
+41 : @ViewChildren decorator : The ViewChildren decorator is used to get a Reference to the list of the DOM element from the view template in the component class.
+                               It returns all the matching element.
+                               ViewChildren give all dom element which give Reference in view template
+
+42 : @ng-template in angular : The ng-template is an angular element which wraps an HTML snippet.
+                               This HTML snippet acts and can be used like a template and can be rendered(with help of Template Reference Variable) in DOM element.
+
+43 : @ng-container : the ng-container is a special angular element that can hold Structural directive without adding new element to the DOM.
+
+44 : <ng-content> : (use in featured component ) in the parent component view template in between Selector of child component that conent replace the ng-content of child view template that is called conent projection.
+
+45 : @ContentChild() in Angular : the @ContentChild decorator is used to access a reference of a DOM  element or a component or directive from the projected content into child component class. 
+
+46 : @ContentChildren() : the @ContentChildren decorator is used to access a reference of all DOM elements,
+                          components or directives from the projected content in the child component class based on a given Selector.
+
+47 : Component Initialization : 1-when a constructor is called by that time, none of its input properties are updated and available to use.
+                                2-when a constructor is called by that time,the child components of that component are not constructed yet.
+                                3-projected contents are also not available by the time the constructor of a component is called.
+                                4-once the component is removed from the DOM, we can say component is destroyed.
+
+48 : Life Cycle Hooks : The angular life Cycle hooks are methods that angular invokes on a directive or a component,as it creates,changes and destroy them.
+                        Life Cycle Hooks : ngOnChanges,ngOnInit,ngDoCheck,ngAfterContentInit,ngAfterContentChanged,ngAfterViewInit,ngAfterViewChecked,ngDestroy.
+
+49 : ngOnChanges LifeCycle hook : The ngOnChanges hook get executed at the start,when a new component is created and its input bound properties are updated.
+                                  The ngOnChanges hook also gets executeds everytime the input bound properties of the component changes.
+                                  The ngOnChanges hook is not raised if the change detection Cycle does not  find any changes in the input properties value.
+
+50 : ngOnInit LifeCycle hook : Angular raises ngOnInit hook after it creates the component and update its input properties.
+                               This hook is raised after ngOnChanges.
+                               The ngOnInit hook is fired only once i.e.during the first change detection Cycle. after that,if the input properties changes, this hook does not gets called.
+            
+                               By the time ngOnInit gets called, none of the child components or projected contents or view are available at this point.
+                               Hence any property decorated with @ViewChild,@ViewChildren,@ContentChild or @ContentChildren will not be available to use.
+
+51 : ngDoCheck  LifeCycle hook : Angular invokes ngDoCheck hook during every change detection Cycle.This hook is invoked even if there is no change in input bound properties.
+
+                                 For Example: the ngDoCheck LifeCycle hook will run if you clicked a button on webpage,which does not do Anything.
+                                 But still its an event so the change detection Cycle will run and execute ngDoCheck hook. 
+
+                                 Angular invokes ngDocheck LifeCycle hook after ngOnChanges and ngOnInit hooks.
+                                 we can use this hook to implement a custom change detection, whenever angular fails to detect any change made to input bound properties.
+                                 The ngDoCheck hook is also a great place to use, when you want to execute some code on every chnage detection Cycle.
+
+52 : ngAfterContentInit LifeCycle hook : The ngAfterContentInit LifeCycle hook is called after the components projected conent has been fully initialized.
+                                         Angular updates the properties decorated with @ContentChild &@ContentChildren decorator just because this hook is raised.
+                                         This LifeCycle hook gets called only once,during the first change detection cycle.After that,if the projected content changes,this LifeCycle hook will not get called.
+
+53 : ngAfterContentChecked : The ngAfterContentChecked lifecycle hook is called during every change detection cycle,
+                             After angular has finished initializing and checking project content.
+                             Whenever projected content change by dynamic that is called ngAfterContentChecked.
+
+                             Angular also updates the properties with @ContentChild and @ContentChildren decorator, before raising ngAfterContentChanged hook.
+                             Angular Raises this hook even if there is no projected content in the component.
+
+                          :: The ngAfterContentInit hook is called after the projected content is initialized.
+                          :: ngAfterContentChecked is called whenevar the projected content is initialized,Checked and updated.
+
+54 : **Note** : The ngAfterContentInit and ngAfterContentChecked are component hook only.
+                These hooks are not available for directives.
+
+55 : ngAfterViewInit LifeCycle hook : The ngAfterViewInit is called after the components view template and all its child components view templates are fully initialized.
+                                      Angular also updates the properties decorated with @ViewChild and @ViewChildren decorate before raising this hook.
+                   
+                                      This hook is called during the first change detection cycle,when angular initialize the view for the first time.
+                                      By, the time this hook gets called for a component, all the lifecycle hook methods of child components and directives are completely processed and child components are completely ready.
+                                      The ngAfterViewInit hook also component only hook not for directives.
+
+56 : ngAfterViewChecked : Angular fires ngAfterViewChecked hook after it checks and updates the components View template and all its child components view templates.
+
+                          This hook is called during the first change detection cycle.after ngAfterViewInit hook has executed.And after that during every change detection cycle.
+
+                          Angular also updates the properties decorated with @ViewChild and @ViewChildren decorator before raising this hook.
+
+                          Note : The ngAfterViewChecked hook is  component hook only. These hook is not available for directives.
+
+57 : ngOnDestroy : Angular fires ngOnDestroy lifecycle hook just before the comoponent or the directive is destroyed. i.e.,removed from the DOM.
+ 
+                   This hook is a great place to do some cleanup work like unsubscribe from an observalable or detach event handler etc.,
+                   as this hook is called right before the component is destroyed.
+
+                   This ngOnDestroy is the last lifecycle hook of a component and directive.
+
+58 : **Note** : All LifeCycle hooks are available for components but not all hooks are not available for directive.
+                ngAfterContentInit,ngAfterContentChecked,ngAfterViewInit,ngAfterViewChecked this are not available for directive.
+
+59 : Custom Attribute Directive : 
+
+60 : 1-Angular keeps the component & View in sync using templates,data binding and change detection etc.All of them are bypassed when we update the DOM directly.
+      
+     2-The DOM manipulation works only in browsers.You will not able to use your app in other platforms like web workers,servers for server-side rendaring,
+       desktop or mobile apps etc. where there is no browser. 
+      
+     3-The DOM's does not sanitize the data.Hence is possible to inject a script,thereby,opening our app an easy target for the XSS injecton attacks.
+
+61 : **Renderer2**(in SetBackground.directives.ts) : Renderer2 allows us to Manipulate the DOM without accessing the DOM element directly,by providing a layer of abstraction between the DOM element and the component code.
+
+62 : @HostListner(in highlight.directives.ts) : The HostListner decorator listen to a DOM event on the host element and its react to that event  by executing an event handler method. 
+
+63 : @HostBinding in Angular [in app-hover.directives.ts, sample.directives.ts(Angular-property-Binding folder)] : The @HostBinding decorator binds a host element property of a directive or a component class.
+
+64 : Property Binding In Directive :  
