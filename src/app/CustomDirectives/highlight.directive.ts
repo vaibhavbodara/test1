@@ -15,5 +15,5 @@ export class HighlightDirective {
   @HostListener('mouseout') OnMouseOut() {
     this.renderer.removeClass(this.element.nativeElement, 'highlight-product')
   }
-
+  
 }

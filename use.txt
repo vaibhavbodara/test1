@@ -96,7 +96,7 @@
                         5-Property: Represents the current value and can change
 
 26 : ATTRIBUTE Binding : ex:Accible attribute- aria-label,aria-hidden,aria-expand,aria-control,
-                          ::  Syntax of attribute binding-[attr.attributeName]="typescript expression"
+                          ::  Syntax of attribute binding-[attr.attributeName]="typescript expression",
                           ::  Data attribute-Data-id,data-name,data-value,colspan                        
 
 27 : Event Binding : Data flow from ViewTemplate to component class with help of Event Binding
@@ -247,4 +247,10 @@
 
 65 : Creating Conditional Attribute Directive(in disable-product.directives and Host in product.component.html) : 
 
-66 : Creating a Custom Class Directive : 
+66 : Creating a Custom Class Directive(Custom ngClass)(Angular-Custom-Class-Directive folder) : this class directive same work as ngClass.
+
+67 : Creating a Custom Style Directive(custom ngStyle Directive) :
+
+68 : How Custom Structural Directives Work? : 
+
+69 : Creating a Custom Structural Directive(custom ngIf Directive) : 
